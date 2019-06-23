@@ -1,5 +1,5 @@
 {
-	"name": "Metropolic",
+	"name": "stopwatch",
 	"version": "1.0.0",
 	"description": "",
 	"main": "./dist/js/script.js",
@@ -10,12 +10,12 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git@bitbucket.org:klogic/metropolic_landingpage.git"
+		"url": "https://github.com/binaryrx/Stopwatch-App"
 	},
 	"devDependencies": {
 		"browser-sync": "^2.26.7",
 		"del": "3.0.0",
-		"gulp": "^4.0.0",
+		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "6.0.0",
 		"gulp-concat": "2.6.1",
 		"gulp-cssnano": "2.1.3",
