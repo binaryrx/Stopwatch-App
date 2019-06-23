@@ -1,0 +1,166 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+// Fonts
+
+@font-face {
+	font-family: ambi;
+	font-weight: 200;/*light*/
+	font-style: normal;
+  src: url("../fonts/ambi-tzar-light.eot");
+	src: url("../fonts/ambi-tzar-light.woff")format('woff');
+}
+@font-face {
+	font-family: ambi;
+	font-weight: 400;/*regular*/
+	font-style: normal;
+	src: url("../fonts/ambi-tzar-regular.eot");
+  src: url("../fonts/ambi-tzar-regular.woff")format('woff');
+  
+  /* src: url("fonts/ambivalenti-regular-aaa.woff")format(woff);  */
+}
+@font-face {
+	font-family: ambi;
+	font-weight: 700;/*bold*/
+	font-style: normal;
+	src: url("../fonts/ambi-tzar-bold.eot");
+  src: url("../fonts/ambi-tzar-bold.woff")format('woff');       
+}
+@font-face {
+	font-family: ambi;
+	font-weight: 900;/*bold*/
+	font-style: normal;
+	src: url("../fonts/ambi-tzar-compressed.eot");
+  src: url("../fonts/ambi-tzar-compressed.woff")format('woff');       
+}
+
+/**
+ * @section Base Styles
+ */
+html{
+	zoom: 100%;
+	scroll-behavior: smooth;
+	
+}
+body {
+	font-size: 1vw;
+	margin: 0 auto;
+	max-width: 1920px;
+	width: 100vw;
+	max-height:100vh;
+
+}
+a:target {
+  display: block;
+  position: relative;
+  top: -120px; 
+  visibility: hidden;
+}
+
+.owl-carousel {
+	display: none;
+	overflow:auto;
+}
+.no-js .owl-carousel {
+	display: block;
+}
+.owl-carousel.owl-loaded {
+	display: block;
+}
+
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}
+input{
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	width: calc(100% - 0px); /* IE 9,10 , Chrome, Firefox */
+    width: -webkit-calc(100% - 0px); /*For safari 6.0*/
+}
+.inputError::placeholder{
+	color:red ;
+}
+.inputError:-ms-input-placeholder{
+	color:red ;
+}
+.inputError::-webkit-input-placeholder{
+	color:red ;
+}
+.inputError:-moz-placeholder{
+	color:red ;
+}
+
+.img-responsive {
+	width: 100%;
+	height: auto;
+	}
+	
+	
+
+.desktop{
+	display:block;
+}
+.mobile{
+	display:none;
+}
+
+
+@media screen and (max-width: 768px) {
+	.desktop{
+		display:none;
+	}
+	.mobile{
+		display:block;
+	}
+}
+
+
+#thanku{
+	display: none;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 2.4vw;
+	margin-bottom: 22.8vh;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+/*** custom checkboxes ***/
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: 'FontAwesome';
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { 
+	// content: "\f046";
+	cursor: pointer;
+	margin-left: 0.5vw;
+ } /* space between checkbox and label */
+
+ .noContent:before{
+	 content: '';
+ }
+
+input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+input[type=checkbox]:checked + label:before {margin-right: -3px; } /* allow space for check mark */
+@media screen and (max-width: 768px) {
+	input[type=checkbox] + label:before { 
+
+		cursor: pointer;
+		margin-left: 1.5vw;
+	 }
+
+
+}

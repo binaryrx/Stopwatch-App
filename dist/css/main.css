@@ -1,0 +1,793 @@
+/*!
+ * Metropolic v1.0.0
+ * 
+ * (c) 2019 BinaryRx
+ * MIT License
+ * git@bitbucket.org:klogic/metropolic_landingpage.git
+ */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+/* line 11, src/sass/components/_normalize.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+/* line 23, src/sass/components/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+/* line 31, src/sass/components/_normalize.scss */
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+/* line 40, src/sass/components/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+/* line 53, src/sass/components/_normalize.scss */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+/* line 64, src/sass/components/_normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+/* line 76, src/sass/components/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+/* line 85, src/sass/components/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+/* line 95, src/sass/components/_normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+/* line 105, src/sass/components/_normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+/* line 116, src/sass/components/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+/* line 125, src/sass/components/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 133, src/sass/components/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 137, src/sass/components/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+/* line 148, src/sass/components/_normalize.scss */
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+/* line 160, src/sass/components/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+/* line 176, src/sass/components/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+/* line 186, src/sass/components/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+/* line 195, src/sass/components/_normalize.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+/* line 206, src/sass/components/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+/* line 218, src/sass/components/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+/* line 229, src/sass/components/_normalize.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+/* line 240, src/sass/components/_normalize.scss */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+/* line 253, src/sass/components/_normalize.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+/* line 261, src/sass/components/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+/* line 270, src/sass/components/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+/* line 280, src/sass/components/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+/* line 290, src/sass/components/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+/* line 299, src/sass/components/_normalize.scss */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+/* line 308, src/sass/components/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+/* line 320, src/sass/components/_normalize.scss */
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+/* line 328, src/sass/components/_normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+/* line 339, src/sass/components/_normalize.scss */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+/* line 347, src/sass/components/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: ambi;
+  font-weight: 200;
+  /*light*/
+  font-style: normal;
+  src: url("../fonts/ambi-tzar-light.eot");
+  src: url("../fonts/ambi-tzar-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: ambi;
+  font-weight: 400;
+  /*regular*/
+  font-style: normal;
+  src: url("../fonts/ambi-tzar-regular.eot");
+  src: url("../fonts/ambi-tzar-regular.woff") format("woff");
+  /* src: url("fonts/ambivalenti-regular-aaa.woff")format(woff);  */
+}
+
+@font-face {
+  font-family: ambi;
+  font-weight: 700;
+  /*bold*/
+  font-style: normal;
+  src: url("../fonts/ambi-tzar-bold.eot");
+  src: url("../fonts/ambi-tzar-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: ambi;
+  font-weight: 900;
+  /*bold*/
+  font-style: normal;
+  src: url("../fonts/ambi-tzar-compressed.eot");
+  src: url("../fonts/ambi-tzar-compressed.woff") format("woff");
+}
+
+/**
+ * @section Base Styles
+ */
+/* line 39, src/sass/components/_base.scss */
+html {
+  zoom: 100%;
+  scroll-behavior: smooth;
+}
+
+/* line 44, src/sass/components/_base.scss */
+body {
+  font-size: 1vw;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100vw;
+  max-height: 100vh;
+}
+
+/* line 52, src/sass/components/_base.scss */
+a:target {
+  display: block;
+  position: relative;
+  top: -120px;
+  visibility: hidden;
+}
+
+/* line 59, src/sass/components/_base.scss */
+.owl-carousel {
+  display: none;
+  overflow: auto;
+}
+
+/* line 63, src/sass/components/_base.scss */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/* line 66, src/sass/components/_base.scss */
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+/* line 71, src/sass/components/_base.scss */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* line 77, src/sass/components/_base.scss */
+input {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: calc(100% - 0px);
+  /* IE 9,10 , Chrome, Firefox */
+  width: -webkit-calc(100% - 0px);
+  /*For safari 6.0*/
+}
+
+/* line 84, src/sass/components/_base.scss */
+.inputError::-webkit-input-placeholder {
+  color: red;
+}
+.inputError:-ms-input-placeholder {
+  color: red;
+}
+.inputError::-ms-input-placeholder {
+  color: red;
+}
+.inputError::placeholder {
+  color: red;
+}
+
+/* line 87, src/sass/components/_base.scss */
+.inputError:-ms-input-placeholder {
+  color: red;
+}
+
+/* line 90, src/sass/components/_base.scss */
+.inputError::-webkit-input-placeholder {
+  color: red;
+}
+
+/* line 93, src/sass/components/_base.scss */
+.inputError:-moz-placeholder {
+  color: red;
+}
+
+/* line 97, src/sass/components/_base.scss */
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* line 104, src/sass/components/_base.scss */
+.desktop {
+  display: block;
+}
+
+/* line 107, src/sass/components/_base.scss */
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 113, src/sass/components/_base.scss */
+  .desktop {
+    display: none;
+  }
+  /* line 116, src/sass/components/_base.scss */
+  .mobile {
+    display: block;
+  }
+}
+
+/* line 122, src/sass/components/_base.scss */
+#thanku {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.4vw;
+  margin-bottom: 22.8vh;
+}
+
+/* line 130, src/sass/components/_base.scss */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*** custom checkboxes ***/
+/* line 139, src/sass/components/_base.scss */
+input[type=checkbox] {
+  display: none;
+}
+
+/* to hide the checkbox itself */
+/* line 140, src/sass/components/_base.scss */
+input[type=checkbox] + label:before {
+  font-family: 'FontAwesome';
+  display: inline-block;
+}
+
+/* line 145, src/sass/components/_base.scss */
+input[type=checkbox] + label:before {
+  content: "\f096";
+}
+
+/* unchecked icon */
+/* line 146, src/sass/components/_base.scss */
+input[type=checkbox] + label:before {
+  cursor: pointer;
+  margin-left: 0.5vw;
+}
+
+/* space between checkbox and label */
+/* line 152, src/sass/components/_base.scss */
+.noContent:before {
+  content: '';
+}
+
+/* line 156, src/sass/components/_base.scss */
+input[type=checkbox]:checked + label:before {
+  content: "\f046";
+}
+
+/* checked icon */
+/* line 157, src/sass/components/_base.scss */
+input[type=checkbox]:checked + label:before {
+  margin-right: -3px;
+}
+
+/* allow space for check mark */
+@media screen and (max-width: 768px) {
+  /* line 159, src/sass/components/_base.scss */
+  input[type=checkbox] + label:before {
+    cursor: pointer;
+    margin-left: 1.5vw;
+  }
+}
+
+/* line 1, src/sass/components/_general.scss */
+body {
+  background: url(../images/bg.jpg) center center fixed no-repeat;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* line 9, src/sass/components/_general.scss */
+.container-fluid {
+  /* Title */
+}
+
+/* line 13, src/sass/components/_general.scss */
+.container-fluid #header {
+  text-align: center;
+  font-size: 4.5vw;
+}
+
+/* line 18, src/sass/components/_general.scss */
+.container-fluid #lap {
+  text-align: right;
+  font-size: 3.5vw;
+}
+
+/* line 32, src/sass/components/_general.scss */
+.container-fluid #time {
+  text-align: center;
+  font-size: 7vw;
+  margin-top: -3vh;
+}
+
+/* line 47, src/sass/components/_general.scss */
+.container-fluid #controllsContainer {
+  margin-bottom: 100px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 30vw;
+  margin-left: 30vw;
+}
+
+/* line 54, src/sass/components/_general.scss */
+.container-fluid #controllsContainer .control {
+  color: #fff;
+  background-color: #d7A04e;
+  border-radius: 100%;
+  width: 8vw;
+  height: 8vw;
+  font-size: 2vw;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+/* line 64, src/sass/components/_general.scss */
+.container-fluid #controllsContainer .control:hover {
+  background-color: #fff;
+  color: #d7A04e;
+}
+
+/* line 68, src/sass/components/_general.scss */
+.container-fluid #controllsContainer .control span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* line 77, src/sass/components/_general.scss */
+.container-fluid #laps {
+  max-height: 270px;
+  overflow-y: scroll;
+}
+
+/* line 80, src/sass/components/_general.scss */
+.container-fluid #laps div.lapInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2vw;
+  border-bottom: 1px solid white;
+  position: relative;
+  margin-bottom: 1vh;
+}
+
+/* line 86, src/sass/components/_general.scss */
+.container-fluid #laps div.lapInfo .lapTime {
+  text-align: right;
+  right: 0.5vw;
+  position: absolute;
+}
+
+@media screen and (max-width: 1000px) {
+  /* line 97, src/sass/components/_general.scss */
+  .container-fluid {
+    /* Title */
+  }
+  /* line 99, src/sass/components/_general.scss */
+  .container-fluid #header {
+    text-align: center;
+    font-size: 7vw;
+  }
+  /* line 104, src/sass/components/_general.scss */
+  .container-fluid #lap {
+    text-align: right;
+    font-size: 4vw;
+  }
+  /* line 131, src/sass/components/_general.scss */
+  .container-fluid #controllsContainer {
+    margin-bottom: 100px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-right: 30vw;
+    margin-left: 30vw;
+  }
+  /* line 138, src/sass/components/_general.scss */
+  .container-fluid #controllsContainer .control {
+    color: #fff;
+    background-color: #d7A04e;
+    border-radius: 100%;
+    width: 10vw;
+    height: 10vw;
+    font-size: 2.5vw;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+  }
+  /* line 148, src/sass/components/_general.scss */
+  .container-fluid #controllsContainer .control:hover {
+    background-color: #fff;
+    color: #d7A04e;
+  }
+  /* line 152, src/sass/components/_general.scss */
+  .container-fluid #controllsContainer .control span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* line 169, src/sass/components/_general.scss */
+  .container-fluid {
+    /* Title */
+  }
+  /* line 171, src/sass/components/_general.scss */
+  .container-fluid #header {
+    text-align: center;
+    font-size: 10vw;
+  }
+  /* line 176, src/sass/components/_general.scss */
+  .container-fluid #lap {
+    text-align: right;
+    font-size: 6vw;
+  }
+  /* line 190, src/sass/components/_general.scss */
+  .container-fluid #time {
+    font-size: 10vw;
+  }
+  /* line 203, src/sass/components/_general.scss */
+  .container-fluid #controllsContainer {
+    margin-right: 20vw;
+    margin-left: 20vw;
+  }
+  /* line 207, src/sass/components/_general.scss */
+  .container-fluid #controllsContainer .control {
+    width: 12vw;
+    height: 12vw;
+    font-size: 3vw;
+  }
+}
